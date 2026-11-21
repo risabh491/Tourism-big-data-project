@@ -1,0 +1,29 @@
+POWER BI DAX MEASURES
+Create these measures after loading the Tourism_Data table.
+
+Total Arrivals =
+SUM('Tourism_Data'[International tourism, number of arrivals])
+
+Total Departures =
+SUM('Tourism_Data'[International tourism, number of departures])
+
+Countries / Entities =
+DISTINCTCOUNT('Tourism_Data'[Country Name])
+
+Average Arrivals =
+AVERAGE('Tourism_Data'[International tourism, number of arrivals])
+
+Latest Data Year =
+MAX('Tourism_Data'[Year])
+
+GDP =
+SUM('Tourism_Data'[GDP])
+
+Population =
+SUM('Tourism_Data'[Population])
+
+IMPORTANT:
+- The source is annual country-year observational data, not monthly visitor demand.
+- The source contains both countries and regional/income aggregates. For the world map, filter Map Eligible = Yes, or use Country_Latest.
+- Do not sum country rows together with aggregate rows (such as World, regions, income groups) when reporting a global total; that double-counts.
+- Latest-year values can differ by country because data availability is not identical. Show Latest Available Year in map tooltips.

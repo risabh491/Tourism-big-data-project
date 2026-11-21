@@ -1,0 +1,41 @@
+GLOBAL TOURISM ANALYTICS — POWER BI STARTER PACKAGE
+
+FILES
+1. Tourism_PowerBI_Data.xlsx — prepared data workbook with:
+   - Tourism_Data: country-year source data, country codes and map eligibility
+   - Country_Latest: latest available year per mapped country (use this for a simple world map)
+   - Year_Summary: annual summary (includes source entities and should not be treated as country-only global totals)
+   - Country_Codes: ISO-3 lookup
+   - World_Data_Reference: original reference data
+2. DAX_Measures.txt — measures to create in Power BI
+3. Tourism_Blue_Theme.json — optional report theme
+
+IMPORT
+1. Open Power BI Desktop.
+2. Home > Get data > Excel workbook.
+3. Select Tourism_PowerBI_Data.xlsx.
+4. Select Tourism_Data, Country_Latest, Year_Summary and click Load.
+5. For a simple world map, use Country_Latest.
+
+WORLD MAP
+1. Add the Azure Maps visual or the Map visual available in your Power BI installation.
+2. Drag Country Name to Location.
+3. Set Country Name data category to Country/Region (Column tools > Data category).
+4. Drag Latest Year Arrivals to Size or Color.
+5. Add Latest Available Year, Latest Year Departures, GDP and Population to Tooltips.
+6. Add a visual/page filter if using Tourism_Data: Map Eligible is Yes.
+7. Do not plot regional aggregates as country locations.
+
+SUGGESTED ONE-PAGE LAYOUT
+- Top row: Total Arrivals, Total Departures, Countries / Entities, Latest Data Year
+- Main center: World map sized/colored by arrivals
+- Left: Year slicer and Country slicer
+- Bottom left: Top 10 countries by arrivals (bar chart)
+- Bottom right: Arrivals by year (line chart)
+- Optional second page: GDP vs arrivals scatter plot and country detail table
+
+IMPORTANT DATA NOTES
+- This package prepares data and the report design; it is not a .PBIX file.
+- The data is annual country-year observational data, not a monthly tourism demand forecast.
+- Source data includes countries and aggregates such as regions/income groups. Avoid summing both together.
+- Country_Latest uses each country's latest available year, so the map tooltip includes that year.
