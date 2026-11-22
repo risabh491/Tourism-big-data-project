@@ -39,4 +39,4 @@ The ML task predicts annual international arrivals by country using the previous
 - optional serialized model in `models/`
 
 ## Power BI
-Use **Get Data → Text/CSV** and import the output CSVs. Useful report pages: Global Overview, Inbound Tourism, Outbound Tourism, Country Comparison, India Profile. The supplied dataset does not contain hotel occupancy, so do not create occupancy KPIs without adding a separate reliable occupancy dataset.
+Use **Get Data → Text/CSV** and import the output CSVs. Useful report pages: Global Overview, Inbound Tourism, Outbound Tourism, Country Comparison, India Profile. The supplied dataset does not contain hotel occupancy, so do not create occupancy KPIs without adding a separate reliable occupancy dataseet.
